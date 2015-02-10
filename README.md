@@ -52,6 +52,7 @@ The receiver channel needs to know the namespace and how to handle new data. Thi
 through the ChromeCastReceiverChannel. The first parameter is the namespace followed by a function that is called
 when a message is received, where the received data is a parameter to this function:
 ```javascript
+... 
  .controller('myctrl', ['$scope', 'ChromeCastReceiverChannel', function ($scope, ChromeCastReceiverChannel) {
     $scope.callback = function(data){
         $scope.data = data;
