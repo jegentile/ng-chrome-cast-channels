@@ -15,7 +15,7 @@ I really do need to thank **naddaf** for the great work [here.](https://github.c
 ## Example
 
 This repository has a sample sender and receiver application. The receiver displays strings from the sender. Both applications
- should work once everything is configured through the Cast SDK Developer Console and the application ID is filled into 
+ should work once everything is configured through the Google Cast SDK Developer Console and the application ID is filled into 
 *sender.html*.
 
 ## Usage
@@ -39,7 +39,7 @@ The sender accesses the *SenderServiceChannel* by including a reference when def
 ...
 ```
 
-Then a Chromecast session needs to be initialized within the sender controller. This is done by calling the *initialize*
+Then a cast session needs to be initialized within the sender controller. This is done by calling the *initialize*
 routine and providing the Application ID and namespace. In the example *sender.html*, this is performed here:
 ```javascript
 ...
