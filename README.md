@@ -42,7 +42,7 @@ Then, within the sender controller, a Chromecast session needs to be initialized
 routine and providing the Application ID and namespace. In the example *sender.html*, this is performed here:
 ```javascript
 ...
-    ChromeCastChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.namespace')
+    ChromeCastSenderChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.namespace')
 ...
 ```
 where *'XXXXXXXX'* is your Application ID and *'urn:x-cast:com.google.cast.sample.namespace'* is your namespace.
@@ -50,7 +50,7 @@ where *'XXXXXXXX'* is your Application ID and *'urn:x-cast:com.google.cast.sampl
 That's it. Now the sender just needs to send data to the receiver. Messages are sent using the `sendMessage` function on
 the service:
 ```javascript
-ChromeCastChannel.sendMessage($scope.message)
+    ChromeCastSenderChannel.sendMessage($scope.message)
 ```
 
 ### Receiver

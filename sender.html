@@ -57,13 +57,13 @@
 <script>
 
 angular.module('myapp',['ng-chrome-cast-channels'])
-        .controller('myctrl',['$scope','ChromeCastSenderChannel',function($scope,ChromeCastChannel){
+        .controller('myctrl',['$scope','ChromeCastSenderChannel',function($scope,ChromeCastSenderChannel){
             //var cc = ChromeCastChannel;
-            ChromeCastChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.helloworld')
+            ChromeCastSenderChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.helloworld')
             // Replace XXXXXXXX with your Application ID
 
             $scope.click = function(){
-                ChromeCastChannel.sendMessage($scope.message)
+                ChromeCastSenderChannel.sendMessage($scope.message)
             }
         }]);
 
