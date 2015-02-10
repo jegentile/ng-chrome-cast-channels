@@ -8,9 +8,9 @@ from the Chrome API.
 You will need to register and receive an Application ID from the Google Cast SDK Developer Console.
 Steps for this are [here.](https://developers.google.com/cast/docs/registration#RegisterApp)
 
-## Credits
+### Credits
 
-Before we start, I really do need to thank **naddaf** for the great work [here.](https://github.com/googlecast/CastHelloText-chrome)
+I really do need to thank **naddaf** for the great work [here.](https://github.com/googlecast/CastHelloText-chrome)
 
 ## Example
 
