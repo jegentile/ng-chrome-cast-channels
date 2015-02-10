@@ -61,6 +61,7 @@ when a message is received, where the received data is a parameter to this funct
     };
     ChromeCastReceiverChannel.initialize('urn:x-cast:com.google.cast.sample.namespace',$scope.callback)
  }])
+ ...
 ```
 
 
