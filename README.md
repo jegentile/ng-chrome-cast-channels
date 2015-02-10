@@ -12,6 +12,12 @@ Steps for this are [here](https://developers.google.com/cast/docs/registration#R
 
 Before we start, I really do need to thank **naddaf** for the great work [here](https://github.com/googlecast/CastHelloText-chrome)
 
+## Example
+
+This repository has a sample sender and receiver application. The receiver displays strings from tne sender. It should 
+work once the application is configured through the Cast SDK Developer Console and the application ID is filled into 
+*sender.html*.
+
 ## Usage
 
 First, have *ng-chrome-cast-channels.js* and require the module via AngularJS:
