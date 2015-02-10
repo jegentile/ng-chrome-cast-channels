@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            height: 720PX;
+            width: 1280PX;
+            text-align: center;
+            border: 0px solid silver;
+            display: table-cell;
+            vertical-align: middle;
+            color: #FFFFFF;
+            background-color: #000000;
+            font-weight: bold;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 40px;
+        }
+    </style>
+    <title>Cast Hello Text</title>
+</head>
+<body ng-app="myapp">
+
+<DIV ng-controller='myctrl' id="message">
+    <h1>{{data}}</h1>
+</DIV>
+<script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+<script src="ng-chrome-cast-channels.js"></script>
+
+
+<script type="text/javascript">
+
+    angular.module('myapp', ['ng-chrome-cast-channels'])
+            .controller('myctrl', ['$scope', 'ChromeCastReceiverChannel', function ($scope, ChromeCastReceiverChannel) {
+                $scope.callback = function(data){
+                    $scope.data = data;
+                    $scope.$apply();
+                };
+
+                ChromeCastReceiverChannel.initialize('urn:x-cast:com.google.cast.sample.helloworld',$scope.callback)
+            }])
+
+</script>
+</body>
+</html>

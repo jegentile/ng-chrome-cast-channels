@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html data-cast-api-enabled="true">
+<head>
+    <title>Hello World</title>
+    <style type="text/css">
+        html, body, #wrapper {
+            height:100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        #wrapper td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        input {
+            font-family: "Arial", Arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        button {
+            font-family: "Arial", Arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+
+        }
+        .border {
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+        }
+        .border:focus {
+            outline: none;
+            border-color: #8ecaed;
+            box-shadow: 0 0 5px #8ecaed;
+        }
+    </style>
+    <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+    <script src="ng-chrome-cast-channels.js"></script>
+</head>
+
+
+
+<body ng-app='myapp'>
+<div ng-controller='myctrl'>
+
+    <input ng-model="message">
+
+    <button ng-click="click()" ng-init="count=0">
+        Send
+    </button>
+</div>
+
+</body>
+
+<script>
+
+angular.module('myapp',['ng-chrome-cast-channels'])
+        .controller('myctrl',['$scope','ChromeCastSenderChannel',function($scope,ChromeCastChannel){
+            //var cc = ChromeCastChannel;
+            ChromeCastChannel.initialize('6D8136A5','urn:x-cast:com.google.cast.sample.helloworld')
+
+            $scope.click = function(){
+                ChromeCastChannel.sendMessage($scope.message)
+            }
+        }]);
+
+
+</script>
+
+</html>
