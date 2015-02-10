@@ -35,6 +35,7 @@ angular.controller('MySenderController',
 Then, within the sender controller, a Chromecast session needs to be initialized. This is done by calling the *initialize*
 routine and providing the Application ID and namespace. In the example *sender.html*, this is performed here:
 ```javascript
+...
     ChromeCastChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.namespace')
 ...
 ```
