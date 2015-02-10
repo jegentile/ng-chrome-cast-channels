@@ -59,7 +59,8 @@
 angular.module('myapp',['ng-chrome-cast-channels'])
         .controller('myctrl',['$scope','ChromeCastSenderChannel',function($scope,ChromeCastChannel){
             //var cc = ChromeCastChannel;
-            ChromeCastChannel.initialize('6D8136A5','urn:x-cast:com.google.cast.sample.helloworld')
+            ChromeCastChannel.initialize('XXXXXXXX','urn:x-cast:com.google.cast.sample.helloworld')
+            // Replace XXXXXXXX with your Application ID
 
             $scope.click = function(){
                 ChromeCastChannel.sendMessage($scope.message)
