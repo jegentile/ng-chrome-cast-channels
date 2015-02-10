@@ -14,8 +14,8 @@ Before we start, I really do need to thank **naddaf** for the great work [here](
 
 ## Example
 
-This repository has a sample sender and receiver application. The receiver displays strings from the sender. It should 
-work once the application is configured through the Cast SDK Developer Console and the application ID is filled into 
+This repository has a sample sender and receiver application. The receiver displays strings from the sender. Both applications
+ should work once the everything is configured through the Cast SDK Developer Console and the application ID is filled into 
 *sender.html*.
 
 ## Usage
