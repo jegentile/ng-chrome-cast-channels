@@ -1,6 +1,7 @@
 # ng-chrome-cast-channels
 
-This AngularJS module simplifies the Chrome Cast API by providing sender and receiver services.
+This AngularJS module simplifies the Chrome Cast API by providing sender and receiver services for simple data transfer
+from the Chrome API.
 
 ## Before we get started ...
 
