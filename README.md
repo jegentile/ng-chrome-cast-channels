@@ -31,7 +31,8 @@ angular.module('MyApplicationName',[...,'ng-chrome-cast-channels'])
 
 The sender accesses the *SenderServiceChannel* by including a reference when defining its controller:
 ```javascript
-angular.controller('MySenderController',
+...
+.controller('MySenderController',
         ['$scope','ChromeCastSenderChannel',... 
             ,function($scope,ChromeCastSenderChannel,...){
 }])
@@ -62,7 +63,7 @@ through the ChromeCastReceiverChannel. The first parameter is the namespace foll
 when a message is received, where the received data is a parameter to this function:
 ```javascript
 ... 
- .controller('myctrl', ['$scope', 'ChromeCastReceiverChannel', function ($scope, ChromeCastReceiverChannel) {
+.controller('myctrl', ['$scope', 'ChromeCastReceiverChannel', function ($scope, ChromeCastReceiverChannel) {
     $scope.callback = function(data){
         $scope.data = data;
         $scope.$apply();
