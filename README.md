@@ -2,7 +2,7 @@
 
 This AngularJS module simplifies the Chrome Cast API by providing sender and receiver services.
 
-## Before you get started
+## Before we get started ...
 
 You will need to register and receive an Application ID from the Google Cast SDK Developer Console.
 Steps for this are [here](https://developers.google.com/cast/docs/registration#RegisterApp)
