@@ -50,7 +50,9 @@ where *'XXXXXXXX'* is your Application ID and *'urn:x-cast:com.google.cast.sampl
 That's it. Now the sender just needs to send data to the receiver. Messages are sent using the `sendMessage` function on
 the service:
 ```javascript
+...    
     ChromeCastSenderChannel.sendMessage($scope.message)
+...
 ```
 
 ### Receiver
